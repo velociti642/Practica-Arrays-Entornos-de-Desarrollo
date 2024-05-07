@@ -8,9 +8,9 @@ import model.minimaNota;
 
 public abstract class MisArrays {
 
-	protected abstract float mediaNotas(int[] notas);
-	protected abstract float medianaNotas(int[] notas);
-	protected abstract float maximaNota(int[] notas);
-	protected abstract float minimaNota(int[] notas);
+	protected abstract float media(int[] notas);
+	protected abstract float mediana(int[] notas);
+	protected abstract float maxima(int[] notas);
+	protected abstract float minima(int[] notas);
 	
 }

@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import util.MisArrays;
-import util.MisArrays;
 
 class TestMediaNotas {
 
@@ -14,7 +13,7 @@ class TestMediaNotas {
 	    int[] notas = {8, 9, 10};
 	    
 	    float mediaEsperada = 9.0f;
-	    float mediaObtenida = MisArrays.mediaNotas(notas);
+	    float mediaObtenida = MisArrays.media(notas);
 
 	    assertEquals(mediaEsperada, mediaObtenida, 0.01f);
 	}
@@ -23,10 +22,9 @@ class TestMediaNotas {
 	public void testMediaNotas_valorInvalido() {
 	    int[] notas = {8, 9, 11};
 
-	    try {
-	        MisArrays.mediaNotas(notas);
-	    } catch (IllegalArgumentException e) {
-	        assertEquals("Una de las notas introducidas no se encuentra entre 0 y 10", e.getMessage());
-	    }
+	    float medianaEsperada = 9.0f;
+	    float medianaObtenida = MisArrays.media(notas);
+
+	    assertEquals(medianaEsperada, medianaObtenida, 0.01f);
 	}
 }

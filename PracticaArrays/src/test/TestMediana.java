@@ -9,23 +9,22 @@ import util.MisArrays;
 class TestMediana {
 	
 	@Test
-	public void testMediaNotas_valoresValidos() {
+	public void testMedianaNotas_valoresValidos() {
 	    int[] notas = {8, 9, 10};
 	    
-	    float mediaEsperada = 9.0f;
-	    float mediaObtenida = MisArrays.mediaNotas(notas);
+	    float medianaEsperada = 9.0f;
+	    float medianaObtenida = MisArrays.mediana(notas);
 
-	    assertEquals(mediaEsperada, mediaObtenida, 0.01f);
+	    assertEquals(medianaEsperada, medianaObtenida, 0.01f);
 	}
 
 	@Test
-	public void testMediaNotas_valorInvalido() {
+	public void testMedianaNotas_valorInvalido() {
 	    int[] notas = {8, 9, 11};
 
-	    try {
-	        MisArrays.mediaNotas(notas);
-	    } catch (IllegalArgumentException e) {
-	        assertEquals("Una de las notas introducidas no se encuentra entre 0 y 10", e.getMessage());
-	    }
+	    float medianaEsperada = 9.0f;
+	    float medianaObtenida = MisArrays.mediana(notas);
+
+	    assertEquals(medianaEsperada, medianaObtenida, 0.01f);
 	}
 }
